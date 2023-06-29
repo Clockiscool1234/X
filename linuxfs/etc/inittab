@@ -1,0 +1,14 @@
+::sysinit:/etc/init.d/rcS
+::sysinit:export PS1="hi"
+::respawn:sh -c "startx && sleep 99999999"
+#::respawn:-login -f user 
+#::sysinit:startx
+ttyS1::respawn:-login -f root
+
+# Stuff to do when restarting the init process
+::restart:/sbin/init
+
+# Stuff to do before rebooting
+::ctrlaltdel:/sbin/reboot
+::shutdown:/etc/shutdown
+

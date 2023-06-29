@@ -1,0 +1,1 @@
+sh -c 'hostname localhost && export PS1="\u@\h:\w\$ " && su user'
